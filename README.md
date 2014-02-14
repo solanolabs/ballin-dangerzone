@@ -1,4 +1,4 @@
 ballin-dangerzone
 =================
 
-sample repo to help with testing
+sample repo to help with testing PRs
