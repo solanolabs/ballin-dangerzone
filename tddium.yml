@@ -2,3 +2,4 @@
   :tests:
   - "echo 'Hello World, Dude.'"
   - "cat hello"
+-hi
