@@ -1,4 +1,5 @@
 :tddium:
   :posgres:
   - "echo 'Hello World, Dude.'"
+  - "cat hello"
   -"cat hello"
