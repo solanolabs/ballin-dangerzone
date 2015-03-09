@@ -1,6 +1,5 @@
 :tddium:
-  :tests:
+  :posgres:
   - "echo 'Hello World, Dude.'"
   - "cat hello 1"
   - "cat hello 2"
-  -"cat hello 3"
