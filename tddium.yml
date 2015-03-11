@@ -1,5 +1,5 @@
 tddium:
   tests:
   - "echo 'Hello World, Dude.'"
-  - "cat hello 1"
-  - "cat hello 2"
+  - "cat hello"
+  - "cat hello >> artifacts/collect_me.txt"
