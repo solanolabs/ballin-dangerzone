@@ -9,6 +9,7 @@ tddium:
   - "echo 'Hello World, Dude.'"
   - "cat hello"
   - "cat hello >> collect_me.txt"
+  - "sleep 20"
   collect:
     repo:
       - "*.txt"
