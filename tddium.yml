@@ -1,4 +1,10 @@
 tddium:
+  hooks:
+    pre_setup: sleep 25
+    worker_setup: sleep 5
+    post_setup: sleep 10
+    post_worker: sleep 15
+    post_build: sleep 20
   tests:
   - "echo 'Hello World, Dude.'"
   - "cat hello"
