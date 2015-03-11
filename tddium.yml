@@ -5,4 +5,4 @@ tddium:
   - "cat hello >> collect_me.txt"
   collect:
     repo:
-      - *.txt
+      - "*.txt"
