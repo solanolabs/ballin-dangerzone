@@ -1,10 +1,10 @@
 tddium:
   hooks:
-    pre_setup: sleep 25
-    worker_setup: sleep 5
-    post_setup: sleep 10
-    post_worker: sleep 15
-    post_build: sleep 20
+    pre_setup: sleep 25 && echo slept_pre_setup
+    worker_setup: sleep 5 && echo slept_pre_setup
+    post_setup: sleep 10 && echo slept_post_setup
+    post_worker: sleep 15 && echo slept_post_worker
+    post_build: sleep 20 && echo slept_post_build
   tests:
   - "echo 'Hello World, Dude.'"
   - "cat hello"
@@ -12,4 +12,5 @@ tddium:
   - "sleep 20"
   collect:
     repo:
-      - "*.txt"
+      - *.txt
+      - artifacts/**
