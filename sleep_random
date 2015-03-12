@@ -1,0 +1,8 @@
+#!/bin/bash
+set -vx
+
+echo 'Sleeping for a random amount of time'
+date
+sleep $[ RANDOM % 20 ]
+date
+echo 'Waking up'

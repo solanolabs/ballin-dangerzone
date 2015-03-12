@@ -1,10 +1,10 @@
 tddium:
   hooks:
-    pre_setup: 'bash sleep 25'
-    worker_setup: 'bash sleep 5'
-    post_setup: 'bash sleep 10'
-    post_worker: 'bash sleep 15'
-    post_build: 'bash sleep 20'
+    pre_setup: './sleep_random'
+    worker_setup: './sleep_random'
+    post_setup: './sleep_random'
+    post_worker: './sleep_random'
+    post_build: './sleep_random'
   tests:
   - "echo 'Hello World, Dude.'"
   - "cat hello"
