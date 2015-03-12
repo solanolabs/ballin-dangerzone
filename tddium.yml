@@ -12,5 +12,5 @@ tddium:
   - "sleep 20"
   collect:
     repo:
-      - *.txt
-      - artifacts/**
+      - "*.txt"
+      - "artifacts/**"
