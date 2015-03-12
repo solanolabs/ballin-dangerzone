@@ -10,3 +10,4 @@ tddium:
   - "cat hello"
   - "cat hello >> collect_me.txt"
   - "sleep 20"
+  - "./sleep_random"
