@@ -1,12 +1,21 @@
-hooks:
-  :pre_setup: './sleep_random'
-  :worker_setup: './sleep_random'
-  :post_setup: './sleep_random'
-  :post_worker: './sleep_random'
-  :post_build: './sleep_random'
+# from https://www.tddium.com/support/reference#customization
+# config/tddium.yml (also see wiki docs)
+#
+# To edit the tddium config: tddium suite --[show|edit]
+# git URL to pull from 'git@github.com:devforce/dfc-site.git'
+# git URL to push WAS 'git@heroku.com:dfc-site-qa.git' but since we have the post_deploy_hook rake task, dont set that anymore.
+# solano.yml or tddium.yml
+---
+ruby_version: ruby-1.9.2 
+submodules: false
 tests:
-- "echo 'Hello World, Dude.'"
-- "cat hello"
-- "cat hello >> collect_me.txt"
-- "sleep 20"
-- "./sleep_random"
+  - bundle exec rake trailhead:check_assessments
+test_pattern: "test"
+:tddium:
+  # :test_pattern:
+  #   #- features/*.feature
+  #   #- features/api/*.feature
+  #   #- spec/**_spec.rb
+  #   #- test/**_test.rb
+known_hosts:
+- github.com,192.30.252.129 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeG1YdEns4QBfQWqypJrSdbB40r3jh2fMsPtpfiSsAbydSeQFbizb3uddpgZ9Cl9hc9i+9qu6SoRM6SACsw62QzX5dhxuTZqa37ZBBrwOFp6iiyzv3ukQtTJ42zUK0rFHBX0WkKSzILWqTV2SIWwEGDflC0Kwt9q+7IXBGXPNd7F/4quAprQcb9U3ozwpy8E234bFY4SNZfatuvb/aTjo2Sgar15VXxTdjmpxmuSjrKzBCPfuHSAKZBICMiluvwmnxCtA+ofTgUv7H9dXUqvrOAZVRnOvzdyteyOalr3qTR8Iwvc2hMFzw9D1Vm/4jm+MRoY8tMD6C4Fs3VKJWOXix ci@solanolabs.com
