@@ -5,7 +5,7 @@ tddium:
     post_setup: bash sleep 10 && echo slept_post_setup
     post_worker: bash sleep 15 && echo slept_post_worker
     post_build: bash sleep 20 && echo slept_post_build
-  tests:
+  posgres:
   - "echo 'Hello World, Dude.'"
   - "cat hello"
   - "cat hello >> collect_me.txt"
