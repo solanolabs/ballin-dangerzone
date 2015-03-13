@@ -1,16 +1,12 @@
-tddium:
-  hooks:
-    pre_setup: bash sleep 25 && echo slept_pre_setup
-    worker_setup: bash sleep 5 && echo slept_pre_setup
-    post_setup: bash sleep 10 && echo slept_post_setup
-    post_worker: bash sleep 15 && echo slept_post_worker
-    post_build: bash sleep 20 && echo slept_post_build
-  posgres:
-  - "echo 'Hello World, Dude.'"
-  - "cat hello"
-  - "cat hello >> collect_me.txt"
-  - "sleep 20"
-  collect:
-    repo:
-      - "*.txt"
-      - "artifacts/**"
+hooks:
+  :pre_setup: './sleep_random'
+  :worker_setup: './sleep_random'
+  :post_setup: './sleep_random'
+  :post_worker: './sleep_random'
+  :post_build: './sleep_random'
+tests:
+- "echo 'Hello World, Dude.'"
+- "cat hello"
+- "cat hello >> collect_me.txt"
+- "sleep 20"
+- "./sleep_random"
