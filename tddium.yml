@@ -4,6 +4,8 @@ hooks:
   :post_setup: './sleep_random'
   :post_worker: './sleep_random'
   :post_build: './sleep_random'
+tddium:
+  :hi
 tests:
 - "echo 'Hello World, Dude.'"
 - "cat hello"
