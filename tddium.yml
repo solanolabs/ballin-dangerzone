@@ -3,8 +3,8 @@ tddium:
     :pre_setup: 'sleep 2'
     :worker_setup: 'sleep 4'
     :post_setup: 'sleep 6'
-    :post_worker: 'sleep 4'
-    :post_build: 'sleep 2'
+    :post_worker: 'sleep 10'
+    :post_build: 'sleep 20'
   tests:
   - "echo 'Hello World, Dude.'"
   - "cat hello"
