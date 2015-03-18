@@ -1,28 +1,12 @@
 tddium:
   hooks:
-    :pre_setup: './sleep_random'
-    :worker_setup: './sleep_random'
-    :post_setup: './sleep_random'
-    :post_worker: './sleep_random'
-    :post_build: './sleep_random'
+    :pre_setup: 'sleep 2'
+    :worker_setup: sleep 4'
+    :post_setup: 'sleep 6'
+    :post_worker: 'sleep 4'
+    :post_build: 'sleep 2'
   tests:
   - "echo 'Hello World, Dude.'"
   - "cat hello"
   - "cat hello >> collect_me.txt"
   - "sleep 20"
-  - "./sleep_random"
-tddium:
-  tests:
-  - "cat hello"
-  - "cat hello >> collect_me.txt"
-  - "./sleep_random"
-solano:
-  tests:
-  - "cat hello >> collect_me.txt"
-  - "./sleep_random"
-solano:
-  tests:
-  - "cat hello"
-  - "cat hello >> collect_me.txt"
-  - "sleep 20"
-  - "./sleep_random"
