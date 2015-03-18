@@ -18,6 +18,10 @@ tddium:
   - "./sleep_random"
 solano:
   tests:
+  - "cat hello >> collect_me.txt"
+  - "./sleep_random"
+solano:
+  tests:
   - "cat hello"
   - "cat hello >> collect_me.txt"
   - "sleep 20"
