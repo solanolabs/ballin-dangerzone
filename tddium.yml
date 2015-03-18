@@ -5,7 +5,7 @@ hooks:
   :post_worker: './sleep_random'
   :post_build: './sleep_random'
 tddium:
-  :hi
+- "echo 'Hello World, Dude.'"
 tests:
 - "echo 'Hello World, Dude.'"
 - "cat hello"
