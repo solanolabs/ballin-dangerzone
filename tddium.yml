@@ -4,11 +4,5 @@ submodules: false
 tests:
   - bundle exec rake trailhead:check_assessments
 test_pattern: "test"
-:tddium:
-  # :test_pattern:
-  #   #- features/*.feature
-  #   #- features/api/*.feature
-  #   #- spec/**_spec.rb
-  #   #- test/**_test.rb
 known_hosts:
 - github.com,192.30.252.129 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCeG1YdEns4QBfQWqypJrSdbB40r3jh2fMsPtpfiSsAbydSeQFbizb3uddpgZ9Cl9hc9i+9qu6SoRM6SACsw62QzX5dhxuTZqa37ZBBrwOFp6iiyzv3ukQtTJ42zUK0rFHBX0WkKSzILWqTV2SIWwEGDflC0Kwt9q+7IXBGXPNd7F/4quAprQcb9U3ozwpy8E234bFY4SNZfatuvb/aTjo2Sgar15VXxTdjmpxmuSjrKzBCPfuHSAKZBICMiluvwmnxCtA+ofTgUv7H9dXUqvrOAZVRnOvzdyteyOalr3qTR8Iwvc2hMFzw9D1Vm/4jm+MRoY8tMD6C4Fs3VKJWOXix ci@solanolabs.com
