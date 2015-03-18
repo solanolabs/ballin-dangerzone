@@ -13,14 +13,11 @@ tddium:
   - "./sleep_random"
 tddium:
   tests:
-  - "echo 'Hello World, Dude.'"
   - "cat hello"
   - "cat hello >> collect_me.txt"
-  - "sleep 20"
   - "./sleep_random"
 solano:
   tests:
-  - "echo 'Hello World, Dude.'"
   - "cat hello"
   - "cat hello >> collect_me.txt"
   - "sleep 20"
