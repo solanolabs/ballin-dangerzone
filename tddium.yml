@@ -1,1 +1,12 @@
-tddium:hooks::pre_setup:'sleep2':worker_setup:'sleep4':post_setup:'sleep6':post_worker:'sleep10':post_build:'sleep20'tests:-"echo'HelloWorld,Dude.'"-"cathello"-"cathello>>collect_me.txt"-"sleep20"
+tddium:
+  hooks:
+    :pre_setup: 'sleep 2'
+    :worker_setup: 'sleep 4'
+    :post_setup: 'sleep 6'
+    :post_worker: 'sleep 10'
+    :post_build: 'sleep 20'
+  tests:
+  - "echo 'Hello World, Dude.'"
+  - "cat hello"
+  - "cat hello >> collect_me.txt"
+  - "sleep 20"
