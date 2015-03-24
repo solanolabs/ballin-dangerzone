@@ -1,10 +1,4 @@
 tddium:
-  hooks:
-    :pre_setup: 'sleep 2'
-    :worker_setup: 'sleep 4'
-    :post_setup: 'sleep 6'
-    :post_worker: 'sleep 4'
-    :post_build: 'sleep 2'
   tests:
   - "ruby -v"
   - "go version"
@@ -14,3 +8,18 @@ tddium:
   - "python -V"
   - "scala -version"
   - "lein version"
+  ruby_version: ruby-2.1.1
+  golang:
+     golang_version: 1.1.2
+  php:
+     version: 5.4.29
+  python:
+     python_version: 3.4.0
+  java:
+    java_version: java-6-openjdk
+  leiningen:
+    leiningen_version: 2.5.1
+  nodejs:
+    version: 0.8.19
+  scala:
+    scala_version: 2.10.4
