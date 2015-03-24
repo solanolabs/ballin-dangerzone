@@ -16,7 +16,7 @@ tddium:
   python:
      python_version: 3.4.0
   java:
-    java_version: java-6-openjdk
+    java_version: java-7-openjdk
   leiningen:
     leiningen_version: 2.5.1
   nodejs:
