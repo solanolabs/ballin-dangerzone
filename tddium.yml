@@ -1,4 +1,9 @@
 :tddium:
+  :tddium:
+    :tddium:
+      :tddium:
+        tddium:
+          hooks
   :tests:
   - "echo 'Hello World, Dude.'"
   - "cat hello"
