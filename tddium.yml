@@ -8,7 +8,7 @@ tddium:
   - "python -V"
   - "scala -version"
   - "lein version"
-  ruby_version: ruby-7.9.1
+  ruby_version: ruby-2.9.1
   golang_version: 1.1.2
   php_version: 5.4.32
   python_version: 2.7
