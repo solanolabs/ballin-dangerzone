@@ -12,9 +12,5 @@ elasticsearch:
   version: '1.4.1'
 phantomjs:
   version: '2.0.0'
-hooks:
-  pre_setup: mv config/elasticsearch.yml.orig config/elasticsearch.yml
-  worker_setup: 'bundle exec rake db:create db:schema:load --trace'
-  post_setup: 'bundle exec rake assets:precompile'
-test_exclude_pattern:
-- "features/*"
+tests:
+  - "php -v"
