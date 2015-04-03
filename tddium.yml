@@ -7,4 +7,3 @@
     :version: java-7-openjdk
   :postgresql:
     :version: '9.3'
-  :sqlite: false
