@@ -8,5 +8,3 @@
   :postgresql:
     :version: '9.3'
   :sqlite: false
-  :solr:
-    :version: '4.2.0'
