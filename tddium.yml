@@ -1,14 +1,40 @@
-environment:
-  TZ: 'America/Los_Angeles'
-  LOCALE: en_US
-ruby_version: ruby-1.9.3-p547
-java:
-  java_version: java-7-openjdk
-mysql:
-  version: '5.5'
-postgresql: false
-sqlite: false
-phantomjs:
-  version: '2.0.0'
-tests:
-  - "php -v"
+# Visit the following link to see available options:
+# http://docs.tddium.com/RunningBuild/config-file-reference/
+#
+:tddium:
+  :test_pattern:
+    - features/**.feature
+    - test/functional/**_test.rb
+    - test/integration/**_test.rb
+    - test/functional/**_test.rb
+    - test/routes/**_test.rb
+    - test/unit/**_test.rb
+    - engines/core_api/test/**_test.rb
+    - extraction/metric_timeslice_client/test/**_test.rb
+  :ruby_version: ruby-2.1.3
+  :bundler_version: 1.7.3
+  :hooks:
+    # The :early: hook defined below will run before tddium runs any commands
+    # to prepare the test suite for RAILS_32. This will only run when the
+    # RAILS_32 environment variable is set to true.
+    #
+    # $r32_boot: Remove once we have finished the upgrade.
+    :early: ruby script/prepare_tddium_for_rails_32.rb
+    :worker_setup: bundle exec rake tddium:worker_setup
+    :post_setup: bundle exec rake tddium:post_setup
+    :post_build: bundle exec rake tddium:post_build_hook
+  :mysql:
+    :version: '5.5'
+  :redis:
+    :version: '2.6.4'
+  :tests:
+    - :type: custom
+      :command: bundle exec rake newrelic:assets jasmine:ci
+      :invocation: single
+      :output: exit-status
+  :timeout_hook: 300
+  :cache:
+    :key_paths:
+      - Gemfile
+      - Gemfile.lockest/unit/**_test.rb
+
