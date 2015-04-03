@@ -1,18 +1,12 @@
-tddium:
-  tests:
-  - "ruby -v"
-  - "go version"
-  - "java -version"
-  - "node -v"
-  - "php -v" 
-  - "python -V"
-  - "scala -version"
-  - "lein version"
-  ruby_version: ruby-2.0.0-p576
-  golang_version: 1.1.2
-  php_version: 5.4.32
-  python_version: hi2.7
-  java_version: java-6-openjdk
-  leiningen_version: hi1.6
-  nodejs_version: 0.8.19
-  scala_version: 2.10.4
+:tddium:
+  :ruby_version: ruby-2.1.5
+  :bundler_version: 1.6.2
+  :test_pattern:
+    - spec/**_spec.rb
+  :java:
+    :version: java-7-openjdk
+  :postgresql:
+    :version: '9.3'
+  :sqlite: false
+  :solr:
+    :version: '4.2.0'
