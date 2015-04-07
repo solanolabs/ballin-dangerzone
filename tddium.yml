@@ -14,5 +14,5 @@ tddium:
   python_version: 2.7
   java_version: java-6-openjdk
   leiningen_version: 1.6
-  nodejs_version: 0.10
+  nodejs_version: 0.8.19
   scala_version: 2.10.4
