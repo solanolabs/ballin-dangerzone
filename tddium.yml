@@ -10,8 +10,8 @@ tddium:
   - "lein version"
   ruby_version: ruby-2.1.1
   golang_version: 1.1.2
-  php_version: 5.4.32
-  python_version: 2.7
+  php_version: 0.4.32
+  python_version: cpython-2.4.6
   java_version: java-6-openjdk
   leiningen_version: 1.6
   nodejs_version: 0.8.19
