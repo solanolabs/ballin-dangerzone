@@ -8,10 +8,11 @@ tddium:
   - "python -V"
   - "scala -version"
   - "lein version"
-  ruby_version: ruby-2.1.1
+  java_version: java-7-openjdk
   php_version: 5.4.32
-  python_version: cpython-2.4.6
-  java_version: java-6-openjdk
+  python_version: 2.7
+  ruby_version: ruby-1.9.3
+  bundler_version: 1.7.3
   leiningen_version: 1.6
   nodejs_version: 0.8.19
   scala_version: 2.10.4
