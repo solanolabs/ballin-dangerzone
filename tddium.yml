@@ -8,7 +8,7 @@ tddium:
   - "python -V"
   - "scala -version"
   - "lein version"
-  java_version: java-7-openjdk
+  java_version: java-6-openjdk
   php_version: 5.4.32
   golang_version: 1.1.2
   python_version: 2.7
