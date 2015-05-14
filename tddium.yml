@@ -1,31 +1,19 @@
-:tddium:
-  :ruby_version: system
-  :skip_package:
-    - ruby
-  :environment:
-    RAILS_ENV: test
-    BUNDLE_APP_CONFIG: .bundle
-    BUNDLE_HOME: vendor/bundle
-    BUNDLE_PATH:
-  :timeout: 10000
-
-  :test_pattern: none
-  :tests:
-   - cd erf && bundle install --deployment && bundle exec rspec
-   - cd gems/run_hive && bundle install && bundle exec rspec
-   - cd gems/tracking && bundle install && bundle exec rspec
-   - cd gems/tracking-rails && bundle install && bundle exec rspec
-   - cd hive/hooks && export JAVA_HOME=/usr/lib/jvm/jre7-airbnb && /usr/local/maven/apache-maven-3.2.1/bin/mvn test
-   - cd util/restorer && export JAVA_HOME=/usr/lib/jvm/jre7-airbnb && ./gradlew test
-
-  :hooks:
-    :pre_setup: |
-      set -o xtrace -o errexit -o pipefail
-      source erf/build_functions.sh
-      erf_pre_setup
-    :post_build: |
-      set -o xtrace -o errexit -o pipefail
-      sha=`git rev-parse HEAD`
-      source erf/build_functions.sh
-      erf_post_build
-
+tddium:
+  tests:
+  - "ruby -v"
+  - "go version"
+  - "java -version"
+  - "node -v"
+  - "php -v" 
+  - "python -V"
+  - "scala -version"
+  - "lein version"
+  java_version: ruby-7-openjdk
+  php_version: 5.4.32
+  golang_version: 1.1.2
+  python_version: 2.7
+  ruby_version: ruby-1.9.3
+  bundler_version: 1.7.3
+  leiningen_version: 1.6
+  nodejs_version: 0.8.19
+  scala_version: 2.10.4
