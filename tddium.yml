@@ -1,21 +1,27 @@
-tddium:
-  tests:
-  - "ruby -v"
-  - "go version"
-  - "java -version"
-  - "node -v"
-  - "php -v" 
-  - "python -V"
-  - "scala -version"
-  - "lein version"
-  java_version: ruby-7-openjdk
-  php_version: 5.4.32
-  golang_version: 1.1.2
-  scala:
-    scala_version: 2.11.4
-    sbt_version: 0.13
-  python_version: 2.7
-  ruby_version: ruby-1.9.3
-  bundler_version: 1.7.3
-  leiningen_version: 1.6
-  nodejs_version: 0.8.19
+:tddium:
+  :ruby_version: ruby-2.0.0-p645
+  :firefox: '32.0.3'
+  :mysql:
+    :version: '5.6.13'
+    :config:
+      collation: 'utf8_unicode_ci'
+      charset: 'utf8'
+  :postgresql:
+    :version: '9.3.5'
+  :test_pattern:
+    - spec/**/*_spec.rb
+  :tests:
+  - :type: custom
+    :command: ./node_modules/karma/bin/karma start --single-run
+    :invocation: single
+    :output: exit-status
+  - :type: custom
+    :command: bundle exec rubocop
+    :invocation: single
+    :output: exit-status
+  :hooks:
+    :pre_setup: bundle exec rake tddium:set_up_database_yml_files
+    :worker_setup: bundle exec rake tddium:mysql_db_setup && bundle exec rake tddium:postgres_db_setup
+    :post_setup: bundle exec rake assets:copy_gem_assets && npm config set prefix $HOME && npm install -g npm@2.7.4 && hash -r && npm install && bower install && RAILS_ENV=test gulp deploy
+  :nodejs:
+    :version: '0.10.31'
