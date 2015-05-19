@@ -11,9 +11,11 @@ tddium:
   java_version: ruby-7-openjdk
   php_version: 5.4.32
   golang_version: 1.1.2
+  scala:
+    scala_version: 2.11.4
+    sbt_version: 0.13
   python_version: 2.7
   ruby_version: ruby-1.9.3
   bundler_version: 1.7.3
   leiningen_version: 1.6
   nodejs_version: 0.8.19
-  scala_version: 2.10.4
