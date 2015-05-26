@@ -17,5 +17,3 @@ tddium:
   leiningen_version: 1.6
   nodejs_version: 0.8.19
   scala_version: 2.10.4
-  worker_limit: 500
-  read_from_config: true
