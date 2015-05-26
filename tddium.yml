@@ -8,7 +8,7 @@ tddium:
   - "python -V"
   - "scala -version"
   - "lein version"
-  java_version: ruby-7-openjdk
+  java_version: java-7-openjdk
   php_version: 5.4.32
   golang_version: 1.1.2
   python_version: 2.7
@@ -17,4 +17,3 @@ tddium:
   leiningen_version: 1.6
   nodejs_version: 0.8.19
   scala_version: 2.10.4
-  language_versions: from_file
