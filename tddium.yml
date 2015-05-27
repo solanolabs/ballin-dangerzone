@@ -1,6 +1,6 @@
 tddium:
   tests:
-  -"ruby -v"
+  - "ruby -v"
   - "go version"
   - "java -version"
   - "node -v"
