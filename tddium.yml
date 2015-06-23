@@ -1,19 +1,9 @@
 tddium:
   tests:
   - "ruby -v"
-  - "go version"
-  - "java -version"
-  - "node -v"
-  - "php -v" 
-  - "python -V"
-  - "scala -version"
-  - "lein version"
-  java_version: java-7-openjdk
-  php_version: 5.4.32
-  golang_version: 1.1.2
-  python_version: 2.7
-  ruby_version: "jruby-1.6.7-mode-1.8.7"
-  bundler_version: 1.7.3
-  leiningen_version: 1.6
-  nodejs_version: 0.8.19
-  scala_version: 2.10.4
+  ruby_version:
+    SPLIT:ruby_versions:
+    - "ruby-2.1.2"
+    - "ruby-1.9.2"
+    - "ruby-1.9.3"
+
