@@ -2,7 +2,7 @@ tddium:
   tests:
   - "ruby -v"
   ruby_version:
-    SPLIT:ruby_versions:
+    SPLIT:ruby_versionz:
     - "ruby-2.1.2"
     - "ruby-1.9.2"
     - "ruby-1.9.3"
