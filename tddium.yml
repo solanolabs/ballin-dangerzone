@@ -8,6 +8,9 @@ tddium:
     - "ruby-1.9.3"
   profiles:
     fun:
+      tests:
+      - "ruby -v"
+      - "go version"
       golang_version:
         SPLIT:golangz:
           - "1.2.1"
