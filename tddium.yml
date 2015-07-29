@@ -12,8 +12,6 @@ tddium:
         SPLIT:golangz:
           - "1.2.1"
           - "1.1.2"
-          - "foo"
-          - "bar"
   plan:
     - "default"
     - "fun"
