@@ -1,20 +1,14 @@
 tddium:
   tests:
   - "ruby -v"
+  - "echo $INTEGRATION"
   ruby_version:
     SPLIT:ruby_versionz:
     - "ruby-2.1.2"
     - "ruby-1.9.2"
     - "ruby-1.9.3"
-  profiles:
-    fun:
-      tests:
-      - "ruby -v"
-      - "go version"
-      golang_version:
-        SPLIT:golangz:
-          - "1.2.1"
-          - "1.1.2"
-  plan:
-    - "default"
-    - "fun"
+  environment:
+    SPLIT:
+    - INTEGRATION: true
+    - INTEGRATION: false
+    - INTEGRATION: maybe
