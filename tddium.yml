@@ -6,4 +6,14 @@ tddium:
     - "ruby-2.1.2"
     - "ruby-1.9.2"
     - "ruby-1.9.3"
-
+  profiles:
+    fun:
+      golang_version:
+        SPLIT:golangz:
+          - "1.2.1"
+          - "1.1.2"
+          - "foo"
+          - "bar"
+  plan:
+    - "default"
+    - "fun"
