@@ -8,7 +8,8 @@ tddium:
     - "ruby-1.9.2"
     - "ruby-1.9.3"
   environment:
-    SPLIT:
-    - INTEGRATION: true
-    - INTEGRATION: false
-    - INTEGRATION: maybe
+    INTEGRATION:
+      SPLIT:int:
+        - true
+        - false
+        - maybs
