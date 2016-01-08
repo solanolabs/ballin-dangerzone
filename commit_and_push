@@ -1,6 +1,6 @@
 #!/bin/bash
 
-date="$(date +%s)"
+date=$(date +%s)
 echo "hello $date" >> hello
 git add hello
 git commit -m "hello $date"
